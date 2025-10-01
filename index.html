@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adarsh Kumar Verma — Website</title>
+  <meta name="description" content="Personal website of Adarsh Kumar Verma" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#111}
+    body{background:#f7fafc;padding:20px}
+    .container{max-width:1000px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);overflow:hidden}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+    .brand{font-weight:700;font-size:1.1rem}
+    nav{display:flex;gap:14px}
+    nav a{text-decoration:none;color:#334155;padding:8px 10px;border-radius:8px}
+    nav a:hover{background:#eef2ff;color:#1e40af}
+    .menu-btn{display:none;background:#eef2ff;border:none;padding:8px;border-radius:8px}
+    .hero{padding:40px 24px;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center}
+    .hero h1{font-size:1.6rem;margin-bottom:12px}
+    .hero p{color:#475569}
+    .cta{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:10px;text-decoration:none;background:#2563eb;color:#fff}
+    .card{padding:18px;border-top:1px solid #eef2ff}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:18px}
+    .feature{background:#f8fafc;padding:14px;border-radius:10px}
+    .feature h3{margin-bottom:8px}
+    form{display:grid;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e2e8f0}
+    button{padding:10px;border-radius:8px;border:none;background:#10b981;color:#fff}
+    footer{padding:12px 24px;text-align:center;color:#64748b;font-size:0.9rem}
+    @media (max-width:800px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+      .menu-btn{display:inline-block}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Adarsh Kumar Verma</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">?</button>
+    </header><section id="home" class="hero">
+  <div>
+    <h1>Welcome to Adarsh Kumar Verma's Website</h1>
+    <p>Yeh ek clean aur responsive starter website hai, jo maine HTML aur CSS se banayi hai.</p>
+    <a class="cta" href="#contact">Contact karo</a>
+  </div>
+
+  <aside style="background:#f1f5f9;padding:18px;border-radius:8px">
+    <h3>Quick info</h3>
+    <p style="color:#475569">Aap yahan apne projects, hobbies aur skills showcase kar sakte ho.</p>
+  </aside>
+</section>
+
+<div class="card">
+  <section id="about" style="padding:18px">
+    <h2>About Me</h2>
+    <p style="color:#475569;margin-top:8px">Main hoon <b>Adarsh Kumar Verma</b>. Yeh meri personal website hai jisme main apne bare me aur projects ke bare me likhunga.</p>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>Responsive</h3>
+      <p>Mobile-friendly layout.</p>
+    </div>
+    <div class="feature">
+      <h3>Accessible</h3>
+      <p>Simple semantic HTML tags use kiye gaye hain.</p>
+    </div>
+    <div class="feature">
+      <h3>Easy to edit</h3>
+      <p>CSS aur HTML directly file ke andar hain — edit kar ke apna bana lo.</p>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:18px">
+    <h2>Contact Me</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Aapka naam" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" rows="4" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+  © <span id="year"></span> Adarsh Kumar Verma • Built with HTML
+</footer>
+</div>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.querySelector('.menu-btn');
+    menuBtn.addEventListener('click', ()=>{
+      const nav = document.querySelector('nav');
+      const isHidden = getComputedStyle(nav).display === 'none';
+      if(isHidden){
+        nav.style.display = 'flex';
+        menuBtn.setAttribute('aria-expanded','true');
+      } else {
+        nav.style.display = 'none';
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    function handleSubmit(e){
+      e.preventDefault();
+      alert('Form submitted (demo). Backend add karke ise active kiya ja sakta hai.');
+      e.target.reset();
+    }
+  </script></body>
+</html>
