@@ -1,8 +1,7 @@
-<!doctype html>
-
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="google-site-verification" 
+   <meta name="google-site-verification" 
   <meta content="WadugnlljEqBDqiHXrViinE9gSrAzwdaDhJ8KsVUOVs" />
   <meta charset="utf-8" />
   <meta name="viewport" 
@@ -10,115 +9,162 @@
   <title>Adarsh Kumar Verma — Website</title>
   <meta name="description" content="Personal website of Adarsh Kumar Verma" />
 </head>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#111}
-    body{background:#f7fafc;padding:20px}
-    .container{max-width:1000px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);overflow:hidden}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
-    .brand{font-weight:700;font-size:1.1rem}
-    nav{display:flex;gap:14px}
-    nav a{text-decoration:none;color:#334155;padding:8px 10px;border-radius:8px}
-    nav a:hover{background:#eef2ff;color:#1e40af}
-    .menu-btn{display:none;background:#eef2ff;border:none;padding:8px;border-radius:8px}
-    .hero{padding:40px 24px;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center}
-    .hero h1{font-size:1.6rem;margin-bottom:12px}
-    .hero p{color:#475569}
-    .cta{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:10px;text-decoration:none;background:#2563eb;color:#fff}
-    .card{padding:18px;border-top:1px solid #eef2ff}
-    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:18px}
-    .feature{background:#f8fafc;padding:14px;border-radius:10px}
-    .feature h3{margin-bottom:8px}
-    form{display:grid;gap:10px}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #e2e8f0}
-    button{padding:10px;border-radius:8px;border:none;background:#10b981;color:#fff}
-    footer{padding:12px 24px;text-align:center;color:#64748b;font-size:0.9rem}
-    @media (max-width:800px){
-      .hero{grid-template-columns:1fr;}
-      nav{display:none}
-      .menu-btn{display:inline-block}
-    }
-  </style>
+</head>  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh | Creator Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0a0a0a; color: #eee; scroll-behavior: smooth; }
+
+        /* Links & Buttons */
+        a { color: #9b59b6; text-decoration: none; }
+        a:hover { color: #6c3483; }
+        button { background-color: #9b59b6; color: #fff; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #6c3483; }
+
+        /* Container */
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 2rem 0; }
+
+        /* Hero Section */
+        #hero { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+        #hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #9b59b6; }
+        #hero p { font-size: 1.5rem; margin-bottom: 2rem; color: #ccc; }
+
+        /* Section Headings */
+        h2.section-title { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #9b59b6; }
+
+        /* About */
+        #about p { font-size: 1.1rem; line-height: 1.8; text-align: center; max-width: 800px; margin: auto; color: #ccc; }
+
+        /* Services / Skills */
+        #skills { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem; }
+        .skill-card { background-color: #1a1a1a; padding: 1.5rem; border-radius: 10px; flex: 1 1 250px; text-align: center; transition: 0.3s; }
+        .skill-card:hover { background-color: #2c2c2c; }
+        .skill-card h3 { margin-bottom: 0.8rem; color: #9b59b6; }
+        .skill-card p { color: #ccc; }
+
+        /* Portfolio */
+        #portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .portfolio-item { background-color: #1a1a1a; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .portfolio-item img { width: 100%; display: block; }
+        .portfolio-item .info { padding: 1rem; }
+        .portfolio-item h4 { margin-bottom: 0.5rem; color: #9b59b6; }
+        .portfolio-item p { color: #ccc; font-size: 0.95rem; }
+
+        /* Testimonials */
+        #testimonials { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; }
+        .testimonial { background-color: #1a1a1a; padding: 1rem 1.5rem; border-radius: 10px; max-width: 600px; text-align: center; }
+        .testimonial p { font-style: italic; color: #ccc; margin-bottom: 0.8rem; }
+        .testimonial span { font-weight: 600; color: #9b59b6; }
+
+        /* Contact */
+        #contact form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: auto; }
+        #contact input, #contact textarea { padding: 0.8rem; border-radius: 5px; border: none; background-color: #2a2a2a; color: #eee; }
+        #contact textarea { resize: vertical; min-height: 120px; }
+
+        /* Footer */
+        footer { text-align: center; padding: 1.5rem 0; background-color: #0a0a0a; color: #777; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #skills { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">Adarsh Kumar Verma</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">?</button>
-    </header><section id="home" class="hero">
-  <div>
-    <h1>Welcome to Adarsh Kumar Verma's Website</h1>
-    <p>Yeh ek clean aur responsive starter website hai, jo maine HTML aur CSS se banayi hai.</p>
-    <a class="cta" href="#contact">Contact karo</a>
-  </div>
 
-  <aside style="background:#f1f5f9;padding:18px;border-radius:8px">
-    <h3>Quick info</h3>
-    <p style="color:#475569">Aap yahan apne projects, hobbies aur skills showcase kar sakte ho.</p>
-  </aside>
-</section>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Hi, I’m Adarsh — Creator & Innovator</h1>
+        <p>I turn ideas into cool projects</p>
+        <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">Check My Work</button>
+    </section>
 
-<div class="card">
-  <section id="about" style="padding:18px">
-    <h2>About Me</h2>
-    <p style="color:#475569;margin-top:8px">Main hoon <b>Adarsh Kumar Verma</b>. Yeh meri personal website hai jisme main apne bare me aur projects ke bare me likhunga.</p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>Hi! Main Adarsh, ek passionate creator aur innovator. Mujhe naye ideas explore karna aur unhe cool projects me transform karna bohot pasand hai. Digital world me creativity aur skills ka perfect combo dikhana mera mission hai.</p>
+    </section>
 
-  <section id="features" class="features">
-    <div class="feature">
-      <h3>Responsive</h3>
-      <p>Mobile-friendly layout.</p>
-    </div>
-    <div class="feature">
-      <h3>Accessible</h3>
-      <p>Simple semantic HTML tags use kiye gaye hain.</p>
-    </div>
-    <div class="feature">
-      <h3>Easy to edit</h3>
-      <p>CSS aur HTML directly file ke andar hain — edit kar ke apna bana lo.</p>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skill-card">
+            <h3>Content Creation</h3>
+            <p>Ideas ko engaging posts, videos aur visuals me transform karna.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Graphic Design</h3>
+            <p>Cool visuals aur creative designs jo attention grab karein.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Social Media Strategy</h3>
+            <p>Audience ke saath connect karna aur brand ko grow karna.</p>
+        </div>
+    </section>
 
-  <section id="contact" style="padding:18px">
-    <h2>Contact Me</h2>
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" name="name" placeholder="Aapka naam" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" rows="4" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-</div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="container">
+        <h2 class="section-title">My Work</h2>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x250" alt="Project 1">
+            <div class="info">
+                <h4>Creative Social Campaign</h4>
+                <p>Ek engaging social media campaign jo audience ko instantly attract kare.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x250" alt="Project 2">
+            <div class="info">
+                <h4>Graphic Design Series</h4>
+                <p>Stylish aur modern visuals jo brand identity ko enhance kare.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x250" alt="Project 3">
+            <div class="info">
+                <h4>Short Video Project</h4>
+                <p>Quick, catchy aur impactful videos jo ideas ko visually express kare.</p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © <span id="year"></span> Adarsh Kumar Verma • Built with HTML
-</footer>
-</div>  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menuBtn = document.querySelector('.menu-btn');
-    menuBtn.addEventListener('click', ()=>{
-      const nav = document.querySelector('nav');
-      const isHidden = getComputedStyle(nav).display === 'none';
-      if(isHidden){
-        nav.style.display = 'flex';
-        menuBtn.setAttribute('aria-expanded','true');
-      } else {
-        nav.style.display = 'none';
-        menuBtn.setAttribute('aria-expanded','false');
-      }
-    });
-    function handleSubmit(e){
-      e.preventDefault();
-      alert('Form submitted (demo). Backend add karke ise active kiya ja sakta hai.');
-      e.target.reset();
-    }
-  </script></body>
-</html>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial">
+            <p>“Adarsh ka kaam hamesha next-level creative hota hai! Har project me naya twist aur energy milti hai.”</p>
+            <span>— Manish Kumar Yadav</span>
+        </div>
+        <div class="testimonial">
+            <p>“Unke designs aur ideas instantly attention grab karte hain. Truly a talented creator!”</p>
+            <span>— Jyoti Mourya</span>
+        </div>
+        <div class="testimonial">
+            <p>“Adarsh ke projects dekh kar inspiration milti hai — simple ideas ko amazing forms me transform kar dete hain.”</p>
+            <span>— Pradeep Yadav</span>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p style="text-align:center; color:#ccc;">Have an idea or project? Let’s create something awesome together!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        © 2025 Adarsh. All Rights Reserved.
+    </footer>
+
+</body>
+  </html>
